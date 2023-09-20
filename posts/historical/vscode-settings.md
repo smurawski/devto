@@ -1,5 +1,4 @@
 ---
-date: '2017-02-14T00:00:00Z'
 tags: 'beginner, git, vscode'
 title: My Git and VS Code Settings
 description: 'My Git and VS Code Settings'
@@ -11,24 +10,12 @@ I work regularly with several different project types and languages across Windo
 
 I find some basic settings for Git and VS Code smooth out some headaches.
 
-For VS Code, I have (at a minimum) several base plugins:
-
-- C#
-- Chef Extension for Visual Studio Code
-- Git Blame
-- Git History (git log)
-- PowerShell
-- [Rust](https://marketplace.visualstudio.com/items?itemName=kalitaalexey.vscode-rust)
-- Ruby
-- XML Tools
-
-And my user settings include:
+My user settings include:
 
 ```
 "files.eol": "\n", // Windows usually doesn't care, but Linux/Mac tooling is way more sensitive
 "editor.trimAutoWhitespace": true,
 "editor.fontSize": 16,
-"rust.cargoHomePath": "C:\\Users\\Steven\\.cargo", // Path to Cargo home directory, mostly needed for racer. Needed only if using custom rust installation.
 "editor.formatOnPaste": true,
 "editor.formatOnSave": true,
 "window.zoomLevel": 0,
