@@ -1,9 +1,11 @@
 ---
 tags: 'beginner, git, vscode'
 title: My Git and VS Code Settings
-description: 'My Git and VS Code Settings'
+description: My Git and VS Code Settings
 published: true
 canonical_url: null
+id: 1606437
+date: '2023-09-20T19:06:36Z'
 ---
 
 I work regularly with several different project types and languages across Windows, Mac, and Linux.
