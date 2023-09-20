@@ -1,8 +1,10 @@
 ---
-date: 2017-02-14T00:00:00Z
+date: '2017-02-14T00:00:00Z'
 tags: 'beginner, git, vscode'
 title: My Git and VS Code Settings
 description: 'My Git and VS Code Settings'
+published: true
+canonical_url: null
 ---
 
 I work regularly with several different project types and languages across Windows, Mac, and Linux.
