@@ -5,7 +5,7 @@
     "url": "https://github.com/smurawski/devto.git"
   },
   "scripts": {
-    "prettier": "prettier --write ."
+    "format": "prettier --write ."
   },
   "dependencies": {
     "prettier": "2.8.8"
