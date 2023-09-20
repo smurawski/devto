@@ -24,7 +24,8 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 14
-
+    - run: npm ci
+    - run: npm run format
     - name: Publish articles on dev.to
       uses: sinedied/publish-devto@v2
       with:
