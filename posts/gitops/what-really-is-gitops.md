@@ -6,11 +6,12 @@ published: true
 id: 1605139
 date: '2023-09-19T15:59:54.606Z'
 ---
+
 ## Welcome
 
-Welcome to the second post in our series on GitOps.  [You'll find the first post - Just Enough Git for GitOps - here](https://aka.ms/cloudnative/JustEnoughGit).
+Welcome to the second post in our series on GitOps. [You'll find the first post - Just Enough Git for GitOps - here](https://aka.ms/cloudnative/JustEnoughGit).
 
-GitOps describes the process and tooling around managing the state of a Kubernetes cluster based on content in a Git repository.  We aren't going to get into specific tooling in this post - that'll start tomorrow with a post on FluxCD (with lots more to follow over the course of the next week and a half).
+GitOps describes the process and tooling around managing the state of a Kubernetes cluster based on content in a Git repository. We aren't going to get into specific tooling in this post - that'll start tomorrow with a post on FluxCD (with lots more to follow over the course of the next week and a half).
 
 ## GitOps is ...
 
@@ -46,7 +47,7 @@ Software agents continuously observe actual system state and attempt to apply th
 
 #### Bare Minimum
 
-GitOps, at a minimum, requires a Git repository and an agent (usually an operator) in your Kubernetes cluster.  The agent's role is to poll for configuration changes between the state of configuration files in a particular branch in the Git repo and the state of the cluster.
+GitOps, at a minimum, requires a Git repository and an agent (usually an operator) in your Kubernetes cluster. The agent's role is to poll for configuration changes between the state of configuration files in a particular branch in the Git repo and the state of the cluster.
 
 Example:
 
@@ -54,7 +55,7 @@ Example:
 
 #### More Realistic Environment
 
-The basic example ignores the container build process and image deployment.  A more realistic example may look like:
+The basic example ignores the container build process and image deployment. A more realistic example may look like:
 
 ![More complete architecture for GitOps with Flux](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/gitops-aks/media/gitops-ci-cd-flux.png)
 
@@ -70,16 +71,16 @@ An agent (operator) that monitors both the cluster configuration and the specifi
 
 Why would we want to use GitOps? I'll call back to the [OpenGitOps group and what they enumerate as the potential benefits of using GitOps tools and practices](https://opengitops.dev/about).
 
-* Increased Developer & Operational Productivity
-* Enhanced Developer Experience
-* Improved Stability
-* Higher Reliability
-* Consistency and Standardization
-* Stronger Security Guarantees
+- Increased Developer & Operational Productivity
+- Enhanced Developer Experience
+- Improved Stability
+- Higher Reliability
+- Consistency and Standardization
+- Stronger Security Guarantees
 
 ### Is GitOps Different from DevOps?
 
-GitOps seems to have a lot in common with traditional DevOps practices.  
+GitOps seems to have a lot in common with traditional DevOps practices.
 
 If we go back to the [Continuous Delivery](https://www.continuousdelivery.com/) concept, we see one of the foundations is Configuration Management - which is where GitOps tooling and process fall.
 
@@ -91,7 +92,7 @@ So, GitOps isn't a replacement or different concept from DevOps - it's tooling a
 
 Coming from an infrastructure as code background, I really like the concept of the GitOps operator performing consistency checks and remediation of configuration drift over my infrastructure.
 
-Using a source control driven process also makes me happy (though not completely... see below).  There are tremendous benefits (see all the State of DevOps reports) to operational stability and reductions in mean time to recovery when your infrastructure configuration is a version-able artifact.
+Using a source control driven process also makes me happy (though not completely... see below). There are tremendous benefits (see all the State of DevOps reports) to operational stability and reductions in mean time to recovery when your infrastructure configuration is a version-able artifact.
 
 ## My Problem(s) with GitOps
 
@@ -103,17 +104,17 @@ Let's start with the operational problem, as that's more of an observation based
 
 Typically, most teams I've worked with have a very difficult time giving control of environmental and operational changes to an agent. One of the reasons tools like Ansible or active deployment by CD tools were so popular was that it was a "push" process where some operator or developer action was required to initiate the process to deploy or change configuration.
 
-When folks attempted to operate agent-based configuration management tools where the agent ran on some schedule and performed a "test and repair" process, the concern was often "what if someone made a manual change?".  While this isn't a technical problem with the tooling, it is a people and process problem.  Folks had a difficult time (either personally or organizationally) allowing the agent to take control and then having to trust (and monitor) the status of those agent operations.
+When folks attempted to operate agent-based configuration management tools where the agent ran on some schedule and performed a "test and repair" process, the concern was often "what if someone made a manual change?". While this isn't a technical problem with the tooling, it is a people and process problem. Folks had a difficult time (either personally or organizationally) allowing the agent to take control and then having to trust (and monitor) the status of those agent operations.
 
-Some of this boiled down to a lack of trust in the configuration management tooling (not the agent, but the instructions the agents had to follow).  This trust could be built by quality testing - which was often neglected.
+Some of this boiled down to a lack of trust in the configuration management tooling (not the agent, but the instructions the agents had to follow). This trust could be built by quality testing - which was often neglected.
 
-Again, this isn't a technical problem with GitOps, but it is a potential blocker if teams cannot buy into funneling all changes through the agent and staying away from the `kubectl` command. 
+Again, this isn't a technical problem with GitOps, but it is a potential blocker if teams cannot buy into funneling all changes through the agent and staying away from the `kubectl` command.
 
 ### My Philosophical Problem with GitOps
 
 One of the core principles of GitOps is that the configuration is "versioned and immutable" and this versioning provides an accurate audit log.
 
-This pushes the responsibility of being an artifact repository to the Git repository, which is not the purpose of the tooling.  We have to rely on hosting solutions and process to enforce process to make sure the repository can achieve those goals.
+This pushes the responsibility of being an artifact repository to the Git repository, which is not the purpose of the tooling. We have to rely on hosting solutions and process to enforce process to make sure the repository can achieve those goals.
 
 Additionally, managing application configuration and secrets requires special handling and forces us to build process outside of the GitOps workflow to ensure auditability and versioning for those values.
 
