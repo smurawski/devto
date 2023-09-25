@@ -4,6 +4,7 @@ description: 'From ClickOps to GitOps: Using Azure Marketplace to get started wi
 tags: 'gitops, cloudnative, beginners'
 published: true
 id: 1607543
+date: '2023-09-25T16:32:35Z'
 ---
 
 ## Our GitOps Journey So Far
