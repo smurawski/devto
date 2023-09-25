@@ -2,7 +2,7 @@
 title: ClickOps to GitOps (an Azure Marketplace story)
 description: 'From ClickOps to GitOps: Using Azure Marketplace to get started with ArgoCD'
 tags: 'gitops, cloudnative, beginners'
-published: false
+published: true
 id: 1607543
 ---
 
