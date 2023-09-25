@@ -327,4 +327,11 @@ We didn't cover anything about dealing with merge conflicts, but we get into tha
 
 {% embed https://www.youtube.com/watch?v=rv8HFYNmHG8 %}
 
+### Continue the conversation
+
+Leave your questions in the comments or come over to the Microsoft Open Source Discord and chat with me and my team in the *cloud-native* channel!
+
+* [Join the Microsoft Open Source Discord](https://aka.ms/cloudnative/JoinOSSDiscord)
+* [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/JoinOSSDiscord)
+
 Watch for a post from our team tomorrow covering what GitOps is!

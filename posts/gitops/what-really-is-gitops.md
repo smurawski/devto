@@ -126,4 +126,11 @@ GitOps is an umbrella for practices and tooling to use Git-based configuration e
 
 Adopting GitOps practices and tools can improve your operational capabilities but requires some forethought and buy in from your team.
 
+### Continue the conversation
+
+Leave your questions in the comments or come over to the Microsoft Open Source Discord and chat with me and my team in the *cloud-native* channel!
+
+* [Join the Microsoft Open Source Discord](https://aka.ms/cloudnative/JoinOSSDiscord)
+* [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/JoinOSSDiscord)
+
 Join us tomorrow to [take a look at Flux](https://aka.ms/cloudnative/GitGoingWithGitOps) with [Paul Yu](https://dev.to/pauldotyu)!
