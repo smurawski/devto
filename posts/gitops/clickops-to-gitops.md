@@ -42,11 +42,11 @@ Our team has dug into some of the basics of GitOps over the past week. So far, w
 
 GitOps tools boil down to:
 
-1) A Git repository
+1. A Git repository
 
-2) An artifact repository (by default, a branch in the Git repo)
+2. An artifact repository (by default, a branch in the Git repo)
 
-3) An agent that is responsible for ensuring that the state of the cluster matches the configuration defined in the artifact repository (over time)
+3. An agent that is responsible for ensuring that the state of the cluster matches the configuration defined in the artifact repository (over time)
 
 ### Applying GitOps
 
@@ -56,10 +56,9 @@ Applying these principles to the use of the tools identified, we can effectively
 
 Now, it's time to dig in to the next GitOps tool in the GitOps ecosystem - [Argo CD](https://argoproj.github.io/cd/).
 
-Argo CD is part of the Argo ecosystem of tools.  Argo CD is a GitOps engine and continuous delivery tool.  Argo CD is a Kubernetes controller that monitors the applications running inside your cluster and ensures that it matches the desired state (as represented by manifests or Helm charts in your target repository).
+Argo CD is part of the Argo ecosystem of tools. Argo CD is a GitOps engine and continuous delivery tool. Argo CD is a Kubernetes controller that monitors the applications running inside your cluster and ensures that it matches the desired state (as represented by manifests or Helm charts in your target repository).
 
 ![Argo CD architectural overview](https://argo-cd.readthedocs.io/en/stable/assets/argocd_architecture.png)
-
 
 ## Reducing Time to Impact with the Azure Marketplace
 
@@ -67,15 +66,15 @@ The Azure Marketplace is integrated into our Azure Kubernetes Service (AKS) clus
 
 ## Installing ArgoCD from the Azure Marketplace
 
-Argo CD is offered through the Azure Marketplace.  Marketplace offers are installed as extensions into AKS.
+Argo CD is offered through the Azure Marketplace. Marketplace offers are installed as extensions into AKS.
 
 We'll start in the Azure Portal on the AKS Cluster view.
 
 ### Extensions + Applications
 
-We'll navigate down the left-hand side of the page to the *Extensions + applications* item under *Settings*.
+We'll navigate down the left-hand side of the page to the _Extensions + applications_ item under _Settings_.
 
-![Azure portal, AKS view, selecting Extensions + applications](./assets/azure_portal_aks_overview.png) 
+![Azure portal, AKS view, selecting Extensions + applications](./assets/azure_portal_aks_overview.png)
 
 ### Add an Application
 
@@ -83,34 +82,33 @@ Next, we'll select Add.
 
 ![AKS Extensions + applications screen with Add highlighted](./assets/azure_portal_aks_extensions.png)
 
-We'll put `argocd` in the search box and select the *Argo CD packaged by Bitnami* offering.
-![Install a Kubernetes Application with ArgoCD in the search box](./assets/azure_portal_aks_install.png)
+We'll put `argocd` in the search box and select the _Argo CD packaged by Bitnami_ offering. ![Install a Kubernetes Application with ArgoCD in the search box](./assets/azure_portal_aks_install.png)
 
-The search will return two options, one a container and one a Kubernetes App. We'll select the Kubernetes App and click *Create*
+The search will return two options, one a container and one a Kubernetes App. We'll select the Kubernetes App and click _Create_
 
 ![Selecting the Kubernetes App for Argo CD](./assets/azure_portal_aks_install_select.png)
 
-This will open up the *Create Argo CD packaged by Bitnami* page.  We specify a subscription and resource group, as well as whether or not we need a new AKS cluster.
+This will open up the _Create Argo CD packaged by Bitnami_ page. We specify a subscription and resource group, as well as whether or not we need a new AKS cluster.
 
 ![Create Argo CD packaged by Bitnami - basics tab with subscription, resource group, and whether or not to create a new AKS cluster.](./assets/azure_portal_create_argo_basics.png)
 
-The next step will be moving to the *Kubernetes Cluster (AKS) Details* tab.
+The next step will be moving to the _Kubernetes Cluster (AKS) Details_ tab.
 
 ![Create Argo CD packaged by Bitnami - Kubernetes Cluster (AKS) Details with dropdown to select a cluster from within the targeted resource group.](./assets/azure_portal_create_argo_cluster.png)
 
-After we specified the cluster details, we move to the *Application Details* tab.  Here, we add a resource name (which has to be lowercase letters or numbers - no symbols - of between 6 and 30 characters).  We can customize the namespace, but we'll take the default. And we can decide if we want the extension to be able to automatically deploy minor version updates.
+After we specified the cluster details, we move to the _Application Details_ tab. Here, we add a resource name (which has to be lowercase letters or numbers - no symbols - of between 6 and 30 characters). We can customize the namespace, but we'll take the default. And we can decide if we want the extension to be able to automatically deploy minor version updates.
 
 ![Create Argo CD packaged by Bitnami - Application Details tab, with the extension resource name, installation namespace, and whether or not to allow auto upgrades for minor versions.](./assets/azure_portal_create_argo_appdetails.png)
 
-The last step of this process is to go to the *Review + create* tab.  Here we'll see the versions of the application and deployment resources, as well as any potential cost (for the packaged application specifically) and other details like terms of use.  We'll click *Create* here.
+The last step of this process is to go to the _Review + create_ tab. Here we'll see the versions of the application and deployment resources, as well as any potential cost (for the packaged application specifically) and other details like terms of use. We'll click _Create_ here.
 
 ![Create Argo CD packaged by Bitnami - Review + create tab.](./assets/azure_portal_create_argo_create.png)
 
-Clicking *Create* kicks of the deployment process.
+Clicking _Create_ kicks of the deployment process.
 
 ![Deployment process in the Azure portal for Argo CD](./assets/azure_portal_deploy_argo_progress.png)
 
-After the deployment completes, we'll have *argocd* listed in our *Extension + applications* section of our AKS Cluster.
+After the deployment completes, we'll have _argocd_ listed in our _Extension + applications_ section of our AKS Cluster.
 
 ![View of the deployed application in the AKS Cluster view in the Azure portal](./assets/azure_portal_aks_extensions_installed.png)
 
@@ -136,7 +134,7 @@ kubectl port-forward svc/argocd-argo-cd-server 30443:80
 
 Then, we can access the Argo CD Server at `https://localhost:30443` with the user name `admin` and the password we retrieved in the previous step.
 
-From there, we could jump into [the sample in the Argo CD documentation](https://argo-cd.readthedocs.io/en/stable/getting_started/#6-create-an-application-from-a-git-repository) and carry on from there. 
+From there, we could jump into [the sample in the Argo CD documentation](https://argo-cd.readthedocs.io/en/stable/getting_started/#6-create-an-application-from-a-git-repository) and carry on from there.
 
 ## Summary
 
@@ -146,9 +144,9 @@ Getting Argo CD up and running is pretty simple and we can start exploring it in
 
 ### Continue the conversation
 
-Leave your questions in the comments or come over to the Microsoft Open Source Discord and chat with me and my team in the *cloud-native* channel!
+Leave your questions in the comments or come over to the Microsoft Open Source Discord and chat with me and my team in the _cloud-native_ channel!
 
-* [Join the Microsoft Open Source Discord](https://aka.ms/cloudnative/JoinOSSDiscord)
-* [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/JoinOSSDiscord)
+- [Join the Microsoft Open Source Discord](https://aka.ms/cloudnative/JoinOSSDiscord)
+- [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/JoinOSSDiscord)
 
 And check back with our team tomorrow, as [Paul](https://dev.to/pauldotyu) digs into [Flagger](https://fluxcd.io/flagger/).

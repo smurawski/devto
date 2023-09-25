@@ -4,7 +4,7 @@ description: 'GitOps Series   This week and next, my team and I are going to be 
 tags: 'git, gitops, cloudnative, beginners'
 published: true
 id: 1604018
-date: '2023-09-18T16:47:35.130Z'
+date: '2023-09-18T16:47:35Z'
 ---
 
 ## GitOps Series
@@ -329,9 +329,9 @@ We didn't cover anything about dealing with merge conflicts, but we get into tha
 
 ### Continue the conversation
 
-Leave your questions in the comments or come over to the Microsoft Open Source Discord and chat with me and my team in the *cloud-native* channel!
+Leave your questions in the comments or come over to the Microsoft Open Source Discord and chat with me and my team in the _cloud-native_ channel!
 
-* [Join the Microsoft Open Source Discord](https://aka.ms/cloudnative/JoinOSSDiscord)
-* [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/JoinOSSDiscord)
+- [Join the Microsoft Open Source Discord](https://aka.ms/cloudnative/JoinOSSDiscord)
+- [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/JoinOSSDiscord)
 
 Watch for a post from our team tomorrow covering what GitOps is!

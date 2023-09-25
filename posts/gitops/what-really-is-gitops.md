@@ -4,7 +4,7 @@ description: Welcome   Welcome to the second post in our series on GitOps.  You'
 tags: 'beginners, cloudnative, azure, devops'
 published: true
 id: 1605139
-date: '2023-09-19T15:59:54.606Z'
+date: '2023-09-19T15:59:54Z'
 ---
 
 ## Welcome
@@ -128,9 +128,9 @@ Adopting GitOps practices and tools can improve your operational capabilities bu
 
 ### Continue the conversation
 
-Leave your questions in the comments or come over to the Microsoft Open Source Discord and chat with me and my team in the *cloud-native* channel!
+Leave your questions in the comments or come over to the Microsoft Open Source Discord and chat with me and my team in the _cloud-native_ channel!
 
-* [Join the Microsoft Open Source Discord](https://aka.ms/cloudnative/JoinOSSDiscord)
-* [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/JoinOSSDiscord)
+- [Join the Microsoft Open Source Discord](https://aka.ms/cloudnative/JoinOSSDiscord)
+- [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/JoinOSSDiscord)
 
 Join us tomorrow to [take a look at Flux](https://aka.ms/cloudnative/GitGoingWithGitOps) with [Paul Yu](https://dev.to/pauldotyu)!
