@@ -131,6 +131,6 @@ Adopting GitOps practices and tools can improve your operational capabilities bu
 Leave your questions in the comments or come over to the Microsoft Open Source Discord and chat with me and my team in the _cloud-native_ channel!
 
 - [Join the Microsoft Open Source Discord](https://aka.ms/cloudnative/JoinOSSDiscord)
-- [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/JoinOSSDiscord)
+- [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/DiscordChannel)
 
 Join us tomorrow to [take a look at Flux](https://aka.ms/cloudnative/GitGoingWithGitOps) with [Paul Yu](https://dev.to/pauldotyu)!

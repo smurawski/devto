@@ -148,6 +148,6 @@ Getting Argo CD up and running is pretty simple and we can start exploring it in
 Leave your questions in the comments or come over to the Microsoft Open Source Discord and chat with me and my team in the _cloud-native_ channel!
 
 - [Join the Microsoft Open Source Discord](https://aka.ms/cloudnative/JoinOSSDiscord)
-- [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/JoinOSSDiscord)
+- [Meet us in the Cloud Native Channel](https://aka.ms/cloudnative/DiscordChannel)
 
 And check back with our team tomorrow, as [Paul](https://dev.to/pauldotyu) digs into [Flagger](https://fluxcd.io/flagger/).
